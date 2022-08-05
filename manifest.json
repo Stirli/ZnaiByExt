@@ -1,0 +1,50 @@
+﻿{
+    "manifest_version": 3,
+    "name": "Неофициальное расширение для кшп.бел",
+    "version": "5.0",
+    "description": "Расширение улучшает опыт использования сайта кшп.бел.",
+    "icons": {
+      "128": "images/icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "images/icon.png",
+      "default_title": "Ipay food extension"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://ipay.znaj.by/school/!iGate2?html=index&lang=ru"
+        ],
+        "run_at": "document_idle",
+        "css": [
+            "content-styles.css"
+        ],
+        "js": [
+          "lib/jquery.js",
+          "content-script.js"
+        ]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+          "resources" : [
+            "Content/content-styles.css", 
+            "Content/api/Page.js",
+            "Content/api/Modules/ClassListExtender.js",
+            "Content/content-main.js"
+          ],
+          "matches": [
+            "https://ipay.znaj.by/*"
+          ]
+      }
+    ],
+    "permissions": [
+      "storage",
+      "declarativeContent",
+      "clipboardRead"
+    ]
+  }
+  
