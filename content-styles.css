@@ -1,3 +1,28 @@
-.oak__branch ul{
+.oak__branch ul {
     display: block !important;
+}
+
+.oak li.oak__leaf {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.oak li.oak__leaf::before {
+    top: 8px !important;
+}
+
+.oak li.oak__leaf:hover a:link {
+    color: white;
+}
+
+.oak li.oak__leaf:hover,
+tr:hover {  
+    background: #11c263 !important;
+    border-radius: 4px;
+    transition: all 800ms ease;
+}
+
+.lastClicked{
+    background: rgb(57, 223, 195) !important;
+    border: 3px solid black;
 }

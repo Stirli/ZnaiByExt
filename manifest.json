@@ -33,7 +33,8 @@
           "resources" : [
             "Content/content-styles.css", 
             "Content/api/Page.js",
-            "Content/api/Modules/ClassListExtender.js",
+            "Content/api/Modules/EditClassModifier.js",
+            "Content/api/Modules/SelectLastClickedRow.js",
             "Content/content-main.js"
           ],
           "matches": [
